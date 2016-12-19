@@ -1,6 +1,6 @@
 function [] = SpatialSimulation
 % ===================================================================
-% SPATIAL PROTOTYPE SIMULATION FOR GAME THEORY PROJECT
+% SPATIAL SIMULATION FOR GAME THEORY PROJECT
 % Traffic Coordination Game Project, in the course
 % Game Theory and Rationality ENM140, Chalmers
 % ===================================================================

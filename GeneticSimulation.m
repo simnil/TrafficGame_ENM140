@@ -1,6 +1,6 @@
 function [finalPopulation] = GeneticSimulation
 % ==============================================================
-% PROTOTYPE SIMULATION FOR GAME THEORY PROJECT
+% GENETIC SIMULATION FOR GAME THEORY PROJECT
 % in the course
 % Game Theory and Rationality ENM140, Chalmers
 % =============================================================
