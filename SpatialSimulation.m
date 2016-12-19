@@ -16,7 +16,7 @@ function [] = SpatialSimulation
 % the highest score. They will prioritize their own strategy in this.
 %
 % By Simon Nilsson (simnilss)
-% Last update 2016-12-12
+% Last update 2016-12-19
 
 
 

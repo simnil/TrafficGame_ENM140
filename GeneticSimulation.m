@@ -14,7 +14,7 @@ function [finalPopulation] = GeneticSimulation
 % optimization.
 %
 % By Simon Nilsson (simnilss)
-% Last updated 2016-12-08
+% Last updated 2016-12-19
 
 
 % =========== GAME PARAMETERS =============================
