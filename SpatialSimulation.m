@@ -50,6 +50,7 @@ customColors =  [0 0 0.5;
                 1 0 0];
 
 % -- Create VideoWriter struct and edit settings ---
+%TODO automatically generate filename with parameters
 video = VideoWriter('spatial result3.avi');
 video.Quality = 100;
 open(video);
