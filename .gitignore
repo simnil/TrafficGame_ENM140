@@ -1,0 +1,16 @@
+# .gitignore
+# for Traffic Coordination Game Project in ENM140 Game Theory and Rationality
+
+# Ignore temporary matlab files
+*.m~
+
+
+# Figures and images
+*.png
+*.pdf
+*.fig
+*.eps
+
+
+# Video files
+*.avi
