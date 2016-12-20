@@ -14,7 +14,7 @@ function [finalPopulation] = GeneticSimulation
 % optimization.
 %
 % By Simon Nilsson (simnilss)
-% Last updated 2016-12-19
+% Last updated 2016-12-20
 
 
 % =========== GAME PARAMETERS =============================
@@ -155,7 +155,7 @@ finalPopulation = population;
 
 end
 
-% ============ HELPER FUNCITON DEFINITIONS ===============
+% ============ HELPER FUNCTION DEFINITIONS ===============
 % --------------------------------------------------------
 
 function probs = NormalizeProbabilities(P)
