@@ -21,7 +21,7 @@ function [] = SpatialSimulation
 
 
 % ===== SIMULATION PARAMETERS ===========================================
-gridSize = 200; % The number of agents will be equal to gridSize*gridSize
+gridSize = 256; % The number of agents will be equal to gridSize*gridSize
 nPaths = 3;     % The number of paths in each subgame (1..neighbours-1)
 cost = 1;       % The c parameter of the mathematical description
 nTimesteps = 1e3;
@@ -53,6 +53,8 @@ customColors =  [0 0 0.5;
 base = 'spatial sim';
 % Change this when running several simulations with the same parameters
 nr = 1;
+% How many frames should each snapshot take up in the video
+nFrames = 2;
 filename = strcat(base, ...
                   '-t', num2str(nTimesteps), ...
                   '-L', num2str(gridSize), ...
@@ -61,8 +63,8 @@ filename = strcat(base, ...
                   '-',  num2str(nr), ...
                   '.avi' ...
                   );
-video = VideoWriter(filename);
-video.Quality = 100;
+video = VideoWriter(filename, 'Uncompressed AVI');
+%video.Quality = 100;
 open(video);
 
 
@@ -112,7 +114,9 @@ for t = 1:nTimesteps
         % arbitrary pause for graphics to update
         pause(0.01);
         frame = im2frame(img, customColors);
-        writeVideo(video, frame);
+        for f=1:nFrames
+            writeVideo(video, frame);
+        end
         set(scorePlot, 'YData', meanScore);
         % arbitrary pause for graphics to update
         pause(0.005);
