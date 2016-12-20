@@ -45,7 +45,7 @@ stratPlot = [];
 for i=1:min(4, populationSize)
     subplot(2,2,i);
     stratPlot(i) = bar(population(i,:));
-    ylim([0 1])
+    axis([0 nActions 0 1])
     title(['Strategy ' num2str(i)])
     xlabel('Path')
     ylabel('Probability')
