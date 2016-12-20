@@ -16,7 +16,7 @@ function [] = SpatialSimulation
 % the highest score. They will prioritize their own strategy in this.
 %
 % By Simon Nilsson (simnilss)
-% Last update 2016-12-19
+% Last update 2016-12-20
 
 
 
@@ -24,7 +24,7 @@ function [] = SpatialSimulation
 gridSize = 200; % The number of agents will be equal to gridSize*gridSize
 nPaths = 3;     % The number of paths in each subgame (1..neighbours-1)
 cost = 1;       % The c parameter of the mathematical description
-nTimesteps = 2e2;
+nTimesteps = 1e3;
 % The probability that the agent switches path regardless of score
 % (to introduce perturbations)
 switchProb = 10/(gridSize*gridSize);
@@ -49,9 +49,19 @@ customColors =  [0 0 0.5;
                 0.8 0.1 0.5;
                 1 0 0];
 
-% -- Create VideoWriter struct and edit settings ---
-%TODO automatically generate filename with parameters
-video = VideoWriter('spatial result3.avi');
+% ----- Create VideoWriter struct and edit settings -----
+base = 'spatial sim';
+% Change this when running several simulations with the same parameters
+nr = 1;
+filename = strcat(base, ...
+                  '-t', num2str(nTimesteps), ...
+                  '-L', num2str(gridSize), ...
+                  '-m', num2str(nPaths), ...
+                  '-c', num2str(cost), ...
+                  '-',  num2str(nr), ...
+                  '.avi' ...
+                  );
+video = VideoWriter(filename);
 video.Quality = 100;
 open(video);
 
@@ -100,18 +110,21 @@ for t = 1:nTimesteps
         img = reshape(population, [gridSize, gridSize]);
         set(plotHandle, 'CData', img);
         % arbitrary pause for graphics to update
-        pause(0.05);
+        pause(0.01);
         frame = im2frame(img, customColors);
         writeVideo(video, frame);
         set(scorePlot, 'YData', meanScore);
         % arbitrary pause for graphics to update
-        pause(0.05);
+        pause(0.005);
     end
 end
 
 close(video);
 
 end
+
+% ======== HELPER FUNCTION DEFINITIONS =========
+% ----------------------------------------------
 
 function score = SubGame(population, coord, gridSize, nPaths, cost)
     
