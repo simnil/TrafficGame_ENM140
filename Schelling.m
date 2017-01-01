@@ -9,7 +9,7 @@ function [] = Schelling
 
 % =================== SIMULATION PARAMETERS ====================
 gridSize = 128;
-satisfyThreshold = 0.7;
+satisfyThreshold = 0.6;
 emptyFrac = 0.1;
 nTimesteps = 5e2;
 
@@ -33,7 +33,6 @@ satisfaction = zeros(size(population));
 figure(1); clf;
 imgHandle = imagesc( reshape(population, [gridSize,gridSize]) );
 colormap(customColors);
-colorbar
 
 
 % ============= SIMULATION LOOP =============
