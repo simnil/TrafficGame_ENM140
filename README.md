@@ -14,6 +14,15 @@ Consider a set of *N* players. All players wish to get from point A to point B, 
 
 where *c* is a cost parameter and *N_i* is the number of __other__ players that chose the same path. The game is a single-round game with $m$ possible actions (the *m* paths) for every player.
 
+## Regarding Results
+
+In the directory `results` several images and video files showing the results of said simulations can be found. The filenames of the video files contain the parameter values used for that specific simulation. These are the same as in the report (to be added soon...)
+	
+- t is the number of time steps that are run during the simulation.
+- L is the side length of the grid
+- m is the number of available paths
+- c is the cost of having other players on the same path
+
 -----
 #### Author:
-*Simon Nilsson (simnilss)*
+Simon Nilsson (simnilss)
