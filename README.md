@@ -16,7 +16,7 @@ where *c* is a cost parameter and *N_i* is the number of __other__ players that 
 
 ## Regarding Results
 
-In the directory `results` several images and video files showing the results of said simulations can be found. The filenames of the video files contain the parameter values used for that specific simulation. These are the same as in the report (to be added soon...)
+In the directory `results` several images and video files showing the results of said simulations can be found. The filenames of the video files contain the parameter values used for that specific simulation. These are the same as in the report.
 	
 - t is the number of time steps that are run during the simulation.
 - L is the side length of the grid
